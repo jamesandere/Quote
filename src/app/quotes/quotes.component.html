@@ -4,4 +4,5 @@
 <ul>
 <li *ngFor='let quote of quotes'>{{quote.quote}}</li>
 </ul>
+<button  (click)='toogleDetails(i)'>Show Details</button>
 <app-quote-details [quote]='quote'></app-quote-details>
