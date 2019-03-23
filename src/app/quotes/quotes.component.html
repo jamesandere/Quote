@@ -1,3 +1,7 @@
-<p>
-  quotes works!
-</p>
+<h1>
+  Quoty!
+</h1>
+<ul>
+<li *ngFor='let quote of quotes'>{{quote.quote}}</li>
+</ul>
+<app-quote-details [quote]='quote'></app-quote-details>
