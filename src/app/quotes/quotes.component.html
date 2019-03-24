@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <app-forms (addQuote)="addNewQuote($event)"></app-forms>
+    </div>
+    <div class="col-md-7">
+      <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
+        <div class="details">
+          <p>{{quote.author}}</p>
+          <br>
+
+        <div>
+          <h4 class="style">{{quote.enterQuote}}<br> Date due  {{quote.submitDate | date}}</h4>
+        </div>
+
+
+          <button class="btn-info" (click)='toggleDetails(i)' type="button" name="button">more </button>
+          <br>
+
+          <app-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'
+            (isMinus)='minusVote($event, i)'>
+            <br>
+          </app-details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
