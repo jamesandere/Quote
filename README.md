@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 22 March, 2019
 
 
-#Description
+# Description
 This app allows a user to create a quote, like and dislike other quotes and also to delete quotes.
 
 # BDD
@@ -21,8 +21,11 @@ No bugs
 
 # Technologies Used
 HTML
+
 CSS
+
 Angular CLI
+
 Bootstrap
 ## Development server
 
