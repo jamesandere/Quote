@@ -9,7 +9,7 @@ export class QuotesComponent implements OnInit {
 
   quotes = [
 
-    new Quote(3, "put your date on, .", "gotii", 0, 0,"James Andere")
+    new Quote(3, "I'm not a 'Business-Man'! I'm a Business... man!", "Jay-Z", 0, 0,"Andere")
   ]
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
