@@ -1,5 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Baloo+Chettan|Playfair+Display" rel="stylesheet">
 <div class="container-fluid">
-  <h1>Quoty!</h1>
   <div class="row">
     <div class="col-md-5">
       <app-forms (addQuote)="addNewQuote($event)"></app-forms>
@@ -8,14 +8,14 @@
       <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
         <div class="details">
           
-
+     <br>
         <div>
-          <h4 class="style">{{quote.enterQuote}}<br> Posted on  {{quote.submitDate | date}}</h4>
+          <h4 class="style">{{quote.enterQuote}}<br> </h4>
         </div>
         <p>~{{quote.author}}</p>
         <br>
 
-          <button class="btn-info" (click)='toggleDetails(i)' type="button" name="button">Show Details </button>
+          <button class=" btn btn-primary" (click)='toggleDetails(i)' type="button" name="button">Show Details </button>
           <br>
 
           <app-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)'
