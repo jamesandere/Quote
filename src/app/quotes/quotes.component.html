@@ -1,8 +1,0 @@
-<h1>
-  Quoty!
-</h1>
-<div *ngFor='let quote of quotes; let i=index'>
-<p>{{quote.quote}}<br><strong>posted on {{quote.completeDate|date|uppercase}}</strong></p>
-</div>
-<button  (click)='toogleDetails(i)'>Show Details</button>
-<app-quote-details *ngIf="quotes.showDescription" [quotes]='quotes' (isComplete)= 'eraseQuote ($event,i)' ></app-quote-details>
