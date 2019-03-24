@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+    <div class="row">
+<form class="myform" #quoteForm="ngForm" (ngSubmit)="saveQuote()">
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control bor"  [(ngModel)]="newQuote.author" name="author"   #author="ngModel"
+                required >
+        </div>
+        <div class="form-group">
+            <label for="submitter">Submitter</label>
+            <input type="text" class="form-control bor"  name="submitter" [(ngModel)]="newQuote.submitter" #submitter="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="enterquote">Enter Quote</label>
+            <textarea class="form-control bor2" type="text" [(ngModel)]="newQuote.enterQuote" name="enterQuote" #enterquote="ngModel" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"> Submit</button>
+</form>
+</div>
+</div>
